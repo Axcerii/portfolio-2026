@@ -2,12 +2,15 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #362C2E;
+  --primary: #DC1D46;
+  --secondary: #DEBA63;
+  --serif-font: "Croissant One", serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #362C2E;
     --foreground: #ededed;
   }
 }
