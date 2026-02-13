@@ -1,12 +1,21 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #DC1D46;
+  --color-secondary: #DEBA63;
+  --color-foreground: #362C2E;
+  --color-background: #fff;
+}
+
+
 :root {
-  --background: #ffffff;
+  --background: #fff;
   --foreground: #362C2E;
   --primary: #DC1D46;
   --secondary: #DEBA63;
   --serif-font: "Croissant One", serif;
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
