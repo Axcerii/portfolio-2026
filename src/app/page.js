@@ -13,6 +13,14 @@ export default function Home() {
 
         <Eye />
 
+        <div class="absolute top-0 left-30 h-full">
+          <img src="/left_vines.png" class="h-full" />
+        </div>
+
+        <div class="absolute top-0 right-30 h-full">
+          <img src="/right_vines.png" class="h-full" />
+        </div>
+
         <div className="absolute top-0 right-0">
           <FrameBorder orientation="right" />
         </div>
