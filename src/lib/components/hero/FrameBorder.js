@@ -10,8 +10,8 @@ export default function FrameBorder(props) {
     }
 
     return (
-        <div className="relative bg-[url('/frame_border_background.jpg')] flex flex-col justify-between items-center h-screen w-30 border-2 border-secondary z-10">
-            <div className="flex justify-center items-center w-full h-1/4 px-10 max-h-9/10">
+        <div className="w-screen h-12 relative bg-[url('/frame_border_background.jpg')] flex flex-col justify-between items-center md:h-screen md:w-30 border-2 border-secondary z-10">
+            <div className="justify-center items-center w-full h-1/4 px-10 max-h-9/10 md:flex hidden">
                 <img
                     src="/hugo_artrish.png"
                     alt=""
@@ -19,11 +19,12 @@ export default function FrameBorder(props) {
                 />
             </div>
 
-            <div className="flex justify-center items-center w-full h-1/2 border-2 border-secondary border-x-0">
-                <h2 style={{ fontFamily: "var(--serif-font)", writingMode: orientation }} className="inline-block text-center text-xl text-white m-auto">•Hugo Malezet - Portfolio•</h2>
+            <div className="flex justify-center items-center w-full h-full md:h-1/2 md:border-2 md:border-secondary md:border-x-0">
+                <h2 style={{ fontFamily: "var(--serif-font)", writingMode: orientation }} className="hidden md:inline-block text-center text-xl text-white m-auto">•Hugo Malezet - Portfolio•</h2>
+                <h2 style={{ fontFamily: "var(--serif-font)" }} className="inline-block md:hidden text-center text-xl text-white m-auto">•Hugo Malezet - Portfolio•</h2>
             </div>
 
-            <div className="flex justify-center items-center w-full h-1/4 px-10">
+            <div className="md:flex hidden justify-center items-center w-full h-1/4 px-10">
                 <img
                     src="/malezet_artrish.png"
                     alt=""
