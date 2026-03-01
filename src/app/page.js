@@ -1,7 +1,60 @@
+"use client";
+import { useEffect } from "react";
 import Eye from "@/lib/components/hero/Eye";
 import FrameBorder from "@/lib/components/hero/FrameBorder";
 
 export default function Home() {
+  useEffect(() => {
+    let triggered = false;
+    let timeoutId;
+
+    const handleInteraction = (e) => {
+      // For keydown events, only trigger on Space or ArrowDown
+      if (e?.type === "keydown" && e.code !== "Space" && e.code !== "ArrowDown") {
+        return;
+      }
+
+      if (triggered) return;
+      triggered = true;
+      clearTimeout(timeoutId);
+
+      console.log("Scroll event triggered by:", e?.type ?? "timeout");
+      const navigation = document.getElementById("navigation");
+      const emptyEye = document.getElementById("empty_eye");
+      const title = document.getElementById("title");
+
+      navigation.style.opacity = "1";
+
+      emptyEye.src = "/empty_eye_2.png";
+
+      title.style.filter = "brightness(0.40)";
+
+      removeListeners();
+    };
+
+    const removeListeners = () => {
+      window.removeEventListener("scroll", handleInteraction);
+      window.removeEventListener("wheel", handleInteraction);
+      window.removeEventListener("touchstart", handleInteraction);
+      window.removeEventListener("click", handleInteraction);
+      window.removeEventListener("keydown", handleInteraction);
+    };
+
+    window.addEventListener("scroll", handleInteraction, { passive: true });
+    window.addEventListener("wheel", handleInteraction, { passive: true });
+    window.addEventListener("touchstart", handleInteraction, { passive: true });
+    window.addEventListener("click", handleInteraction);
+    window.addEventListener("keydown", handleInteraction);
+
+    // Fallback: trigger after 10 seconds of inactivity
+    timeoutId = setTimeout(() => handleInteraction(null), 10_000);
+
+    return () => {
+      removeListeners();
+      clearTimeout(timeoutId);
+    };
+  }, []);
+
   return (
     <main className="relative overflow-hidden">
       <section className="flex flex-rowabsolute w-screen h-screen z-0 bg-[url('/eye_background.jpg')] bg-cover bg-center bg-no-repeat">
@@ -25,9 +78,12 @@ export default function Home() {
           <FrameBorder orientation="right" />
         </div>
 
-        <div className="w-full absolute left-0 box-border bottom-22 sm:bottom-0 sm:left-1/8 lg:w-1/4 md:w-1/2 bg-foreground/80 z-1000 px-12 pt-6 pb-2">
+        <div className="w-full absolute left-0 box-border bottom-22 sm:bottom-0 sm:left-1/8 lg:w-1/4 md:w-1/2 bg-foreground/80 z-1005 px-12 pt-6 pb-2 transition-filter duration-500" id="title">
           <img src="/hugo_malezet_titre.png" alt="" className="w-full" />
         </div>
+      </section>
+      <section id="navigation" className="absolute top-0 left-0 w-screen h-screen bg-foreground/75 z-1000 transition-opacity duration-500" style={{ opacity: "0" }}>
+
       </section>
     </main>
   );

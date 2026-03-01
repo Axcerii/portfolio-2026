@@ -119,12 +119,12 @@ export default function Eye() {
             <img
                 src="/sclera.png"
                 alt=""
-                className="absolute inset-0 pointer-events-none w-17/20 my-auto object-contain"
+                className="absolute inset-0 pointer-events-none w-17/20 my-auto object-contain z-999"
             />
 
             {/* Pupil — size is driven by the actual rendered size of empty_eye.png */}
             <div
-                className="absolute pointer-events-none flex items-center justify-center"
+                className="absolute pointer-events-none flex items-center justify-center z-1002"
                 style={{
                     width: pupilSize ? `${pupilSize}px` : "55%",
                     height: pupilSize ? `${pupilSize}px` : "55%",
@@ -143,7 +143,8 @@ export default function Eye() {
                 ref={emptyEyeRef}
                 src="/empty_eye.png"
                 alt=""
-                className="absolute inset-0 pointer-events-none w-full h-full object-contain"
+                className="absolute inset-0 pointer-events-none w-full h-full object-contain z-1003 transition-filter duration-500"
+                id="empty_eye"
             />
         </div>
     );
