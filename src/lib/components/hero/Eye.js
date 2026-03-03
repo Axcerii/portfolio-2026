@@ -4,16 +4,22 @@ import React, { useState, useEffect, useRef } from "react";
 
 // Ratio of the pupil relative to the empty_eye image (0.55 = 55%)
 const PUPIL_TO_EYE_RATIO = 0.55;
+// Ratio of the sclera relative to the empty_eye image (1.0 = same size)
+const SCLERA_TO_EYE_RATIO = 1.0;
 
 export default function Eye() {
     const containerRef = useRef(null);
     const emptyEyeRef = useRef(null);
+    // Stores the live rendered pixel dimensions of empty_eye so the mouse handler
+    // can read them without a stale closure (no re-render needed).
+    const eyeRenderedSize = useRef({ w: 0, h: 0 });
     const [pupilPosition, setPupilPosition] = useState({ x: 0, y: 0 });
     const [pupilSize, setPupilSize] = useState(null); // in px, derived from empty_eye rendered size
+    const [scleraSize, setScleraSize] = useState(null); // in px, derived from empty_eye rendered size
 
-    const BASE_SIZE = 800;
-    const BASE_RADIUS_X = 170;
-    const BASE_RADIUS_Y = 220;
+    // Fraction of the rendered eye width/height that forms the constraint ellipse
+    const RADIUS_X_RATIO = 170 / 800; // ~0.2125
+    const RADIUS_Y_RATIO = 220 / 800; // 0.275
     const ROTATION_DEG = -40;
 
     // Measure the actual rendered size of empty_eye.png and keep the pupil proportional
@@ -43,7 +49,11 @@ export default function Eye() {
                 renderedW = containerH * imgRatio;
             }
 
+            // Keep the rendered eye size available to the mouse handler
+            eyeRenderedSize.current = { w: renderedW, h: renderedH };
+
             setPupilSize(Math.round(renderedW * PUPIL_TO_EYE_RATIO));
+            setScleraSize(Math.round(renderedW * SCLERA_TO_EYE_RATIO));
         };
 
         // Run once after the image loads
@@ -68,9 +78,11 @@ export default function Eye() {
             if (!containerRef.current) return;
 
             const rect = containerRef.current.getBoundingClientRect();
-            const currentScale = rect.width / BASE_SIZE;
-            const dynamicRadiusX = BASE_RADIUS_X * currentScale;
-            const dynamicRadiusY = BASE_RADIUS_Y * currentScale;
+            // Derive the constraint ellipse from the eye's actual rendered size so
+            // the pupil can never leave the eye boundary regardless of screen size.
+            const { w: eyeW, h: eyeH } = eyeRenderedSize.current;
+            const dynamicRadiusX = (eyeW || rect.width) * RADIUS_X_RATIO;
+            const dynamicRadiusY = (eyeH || rect.height) * RADIUS_Y_RATIO;
 
             const centerX = rect.left + rect.width / 2;
             const centerY = rect.top + rect.height / 2;
@@ -119,7 +131,11 @@ export default function Eye() {
             <img
                 src="/sclera.png"
                 alt=""
-                className="absolute inset-0 pointer-events-none w-17/20 my-auto object-contain z-999"
+                className="absolute pointer-events-none object-contain z-999"
+                style={{
+                    width: scleraSize ? `${scleraSize}px` : "100%",
+                    height: scleraSize ? `${scleraSize}px` : "100%",
+                }}
             />
 
             {/* Pupil — size is driven by the actual rendered size of empty_eye.png */}
