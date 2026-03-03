@@ -81,7 +81,7 @@ export default function Home() {
           <FrameBorder orientation="right" />
         </div>
 
-        <div className="w-full absolute left-0 box-border bottom-22 sm:bottom-0 sm:left-1/8 lg:w-1/4 md:w-1/2 bg-foreground/80 z-1005 px-12 pt-6 pb-2 transition-filter duration-500" id="title">
+        <div className="blur-fade-vertical w-full absolute left-0 box-border bottom-22 sm:bottom-0 sm:left-1/8 lg:w-1/4 md:w-1/2 bg-foreground/80 z-1005 px-12 pt-6 pb-2 transition-filter duration-500" id="title">
           <img src="/hugo_malezet_titre.png" alt="" className="w-full" />
         </div>
       </section>
