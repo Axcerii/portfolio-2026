@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import Eye from "@/lib/components/hero/Eye";
 import FrameBorder from "@/lib/components/hero/FrameBorder";
+import DragonLink from "@/lib/components/nav/dragon_link";
 
 export default function Home() {
   useEffect(() => {
@@ -19,10 +20,12 @@ export default function Home() {
       clearTimeout(timeoutId);
 
       console.log("Scroll event triggered by:", e?.type ?? "timeout");
+      const background = document.getElementById("background");
       const navigation = document.getElementById("navigation");
       const emptyEye = document.getElementById("empty_eye");
       const title = document.getElementById("title");
 
+      background.style.opacity = "1";
       navigation.style.opacity = "1";
 
       emptyEye.src = "/empty_eye_2.png";
@@ -82,8 +85,28 @@ export default function Home() {
           <img src="/hugo_malezet_titre.png" alt="" className="w-full" />
         </div>
       </section>
-      <section id="navigation" className="absolute top-0 left-0 w-screen h-screen bg-foreground/75 z-1000 transition-opacity duration-500" style={{ opacity: "0" }}>
+      <div id="background" className="absolute top-0 left-0 w-screen h-screen bg-foreground/75 z-1000 transition-opacity duration-500" style={{ opacity: "0" }}>
 
+      </div>
+      <section id="navigation" className="w-screen h-screen absolute top-0 left-0 z-2000 transition-opacity duration-500" style={{ opacity: "0" }}>
+        <div className="absolute top-1/8 left-1/4 -translate-y-1/2">
+          <DragonLink dragon="Pura.png" text="Présentation" href="#presentation" />
+        </div>
+        <div className="absolute top-1/3 md:top-1/4 right-1/7 -translate-y-1/2">
+          <DragonLink dragon="Artrish.png" text="Passions" href="#passions" />
+        </div>
+        <div className="absolute top-3/7 left-1/8 -translate-y-1/2">
+          <DragonLink dragon="Lada.png" text="Expérience" href="#experience" />
+        </div>
+        <div className="absolute top-4/7 right-1/10 -translate-y-1/2">
+          <DragonLink dragon="Yinva.png" text="Projets" href="#projets" />
+        </div>
+        <div className="absolute top-6/9 md:top-7/9 left-1/5 -translate-y-1/2">
+          <DragonLink dragon="Pestia.png" text="Contact" href="#contact" />
+        </div>
+        <div className="absolute top-9/11 right-2/9 -translate-y-1/2">
+          <DragonLink dragon="Drii.png" text="Maîtrises" href="#maitrise" />
+        </div>
       </section>
     </main>
   );

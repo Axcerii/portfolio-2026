@@ -5,6 +5,7 @@
   --color-secondary: #DEBA63;
   --color-foreground: #362C2E;
   --color-background: #fff;
+  --color-accent: #1ddcb3;
 }
 
 
@@ -13,6 +14,7 @@
   --foreground: #362C2E;
   --primary: #DC1D46;
   --secondary: #DEBA63;
+  --accent: #1ddcb3;
   --serif-font: "Croissant One", serif;
 }
 
@@ -45,6 +47,31 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.color-accent {
+  filter: brightness(0) saturate(100%) invert(96%) sepia(64%) saturate(3925%) hue-rotate(86deg) brightness(96%) contrast(78%);
+}
+
+.underline-center {
+  position: relative;
+}
+
+.underline-center::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s ease;
+}
+
+.underline-center:hover::after {
+  transform: scaleX(1);
 }
 
 @media (prefers-color-scheme: dark) {
