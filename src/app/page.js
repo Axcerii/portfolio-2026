@@ -1,11 +1,41 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Eye from "@/lib/components/hero/Eye";
 import FrameBorder from "@/lib/components/hero/FrameBorder";
 import DragonLink from "@/lib/components/nav/dragon_link";
+import Presentation from "@/lib/components/presentations/Presentation";
 
 export default function Home() {
+  const [isScrollLocked, setIsScrollLocked] = useState(true);
+
   useEffect(() => {
+    // ── Lock scroll until a nav link is clicked ──────────────────────────────
+    document.body.style.overflow = isScrollLocked ? "hidden" : "";
+
+    const navEl = document.getElementById("navigation");
+    const unlockScroll = (e) => {
+      const anchor = e.target.closest("a[href]");
+      if (!anchor) return;
+      // Prevent the native jump — it would fire before overflow is cleared
+      e.preventDefault();
+      // Release body scroll first by updating state
+      setIsScrollLocked(false);
+
+      const targetId = anchor.getAttribute("href")?.replace("#", "");
+      if (targetId) {
+        // Wait a tick for React to remove overflow classes from <main>
+        setTimeout(() => {
+          const targetEl = document.getElementById(targetId);
+          targetEl?.scrollIntoView({ behavior: "smooth" });
+        }, 10);
+      }
+    };
+
+    if (isScrollLocked) {
+      navEl?.addEventListener("click", unlockScroll);
+    }
+
+    // ── Reveal navigation overlay on any first interaction ───────────────────
     let triggered = false;
     let timeoutId;
 
@@ -24,11 +54,15 @@ export default function Home() {
       const navigation = document.getElementById("navigation");
       const emptyEye = document.getElementById("empty_eye");
       const title = document.getElementById("title");
+      const leftVines = document.getElementById("left_vines");
+      const rightVines = document.getElementById("right_vines");
 
       background.style.opacity = "1";
       navigation.style.opacity = "1";
 
       emptyEye.src = "/empty_eye_2.png";
+      leftVines.src = "/left_vines_2.png";
+      rightVines.src = "/right_vines_2.png";
 
       title.style.filter = "brightness(0.40)";
 
@@ -55,12 +89,15 @@ export default function Home() {
     return () => {
       removeListeners();
       clearTimeout(timeoutId);
+      navEl?.removeEventListener("click", unlockScroll);
+      // Always clean up body lock on unmount padding
+      document.body.style.overflow = "";
     };
-  }, []);
+  }, [isScrollLocked]);
 
   return (
-    <main className="relative overflow-hidden">
-      <section className="flex flex-rowabsolute w-screen h-screen z-0 bg-[url('/eye_background.jpg')] bg-cover bg-center bg-no-repeat">
+    <main className={`relative ${isScrollLocked ? "h-svh overflow-hidden" : "min-h-svh overflow-x-hidden"}`}>
+      <section className="flex flex-row relative overflow-hidden w-full h-svh bg-[url('/eye_background.jpg')] bg-cover bg-center bg-no-repeat">
         <h1 className="hidden">Hugo Malezet</h1>
 
         <div className="absolute top-0 left-0 md:block hidden">
@@ -69,19 +106,19 @@ export default function Home() {
 
         <Eye />
 
-        <div className="absolute top-0 left-0 w-full h-32 lg:h-full lg:w-auto lg:left-30 pointer-events-none flex justify-center items-center">
-          <img src="/left_vines.png" className="absolute h-[100vw] lg:h-full w-auto rotate-90 lg:rotate-0 lg:relative" alt="Left Vines" />
+        <div className="absolute top-0 left-0 w-full h-32 lg:h-full lg:w-auto lg:left-30 pointer-events-none flex justify-center items-center z-1005">
+          <img id="left_vines" src="/left_vines.png" className="absolute h-[100vw] lg:h-full w-auto rotate-90 lg:rotate-0 lg:relative transition-all duration-500" alt="Left Vines" />
         </div>
 
-        <div className="absolute bottom-[8.5%] lg:bottom-auto lg:top-0 left-0 lg:left-auto lg:right-30 w-full h-32 lg:h-full lg:w-auto pointer-events-none flex justify-center items-center">
-          <img src="/right_vines.png" className="absolute h-[100vw] lg:h-full w-auto rotate-90 lg:rotate-0 lg:relative" alt="Right Vines" />
+        <div className="absolute bottom-[8.5%] lg:bottom-auto lg:top-0 left-0 lg:left-auto lg:right-30 w-full h-32 lg:h-full lg:w-auto pointer-events-none flex justify-center items-center z-1005">
+          <img id="right_vines" src="/right_vines.png" className="absolute h-[100vw] lg:h-full w-auto rotate-90 lg:rotate-0 lg:relative transition-all duration-500" alt="Right Vines" />
         </div>
 
         <div className="absolute bottom-10 md:top-0 md:right-0 md:bottom-auto">
           <FrameBorder orientation="right" />
         </div>
 
-        <div className="blur-fade-vertical w-full absolute left-0 box-border bottom-22 sm:bottom-0 sm:left-1/8 lg:w-1/4 md:w-1/2 bg-foreground/80 z-1005 px-12 pt-6 pb-2 transition-filter duration-500" id="title">
+        <div className="blur-fade-vertical w-full absolute left-0 box-border bottom-22 sm:left-1/8 lg:w-1/4 md:w-1/2 bg-foreground/80 z-1005 px-12 pt-6 pb-2 transition-filter duration-500 md:bottom-0 md:top-auto md:translate-y-0" id="title">
           <img src="/hugo_malezet_titre.png" alt="" className="w-full" />
         </div>
       </section>
@@ -108,6 +145,8 @@ export default function Home() {
           <DragonLink dragon="Drii.png" text="Maîtrises" href="#maitrise" />
         </div>
       </section>
+
+      <Presentation />
     </main>
   );
 }
