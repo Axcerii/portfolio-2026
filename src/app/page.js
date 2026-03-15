@@ -4,6 +4,7 @@ import Eye from "@/lib/components/hero/Eye";
 import FrameBorder from "@/lib/components/hero/FrameBorder";
 import DragonLink from "@/lib/components/nav/dragon_link";
 import Presentation from "@/lib/components/presentations/Presentation";
+import Passions from "@/lib/components/passions/Passions";
 
 export default function Home() {
   const [isScrollLocked, setIsScrollLocked] = useState(true);
@@ -147,6 +148,7 @@ export default function Home() {
       </section>
 
       <Presentation />
+      <Passions />
     </main>
   );
 }
