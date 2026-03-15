@@ -1,21 +1,8 @@
 "use client";
 
 import React from "react";
-import {
-    SiReact,
-    SiJavascript,
-    SiTypescript,
-    SiNodedotjs,
-    SiGit,
-    SiCss,
-    SiFigma,
-    SiHtml5,
-    SiSvelte
-} from "react-icons/si";
-import { MdOutlineDesignServices } from "react-icons/md";
-import { TbBrandCSharp } from "react-icons/tb";
-
 import SkillPill from "../common/SkillPill";
+import { presentationContent } from "@/config/content";
 
 // ─── tiny reusable pieces ────────────────────────────────────────────────────
 
@@ -58,7 +45,7 @@ export default function Presentation() {
             {/* ── decorative accent bar (left) ── */}
             <div
                 aria-hidden
-                className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-transparent via-primary to-transparent opacity-60"
+                className="absolute left-0 top-0 h-full w-1 bg-linear-to-b from-transparent via-primary to-transparent opacity-60"
             />
 
             {/* ── content grid ── */}
@@ -69,7 +56,7 @@ export default function Presentation() {
                     {/* image frame */}
                     <div
                         className="
-              relative w-64 h-80 md:w-72 md:h-96 lg:w-80 lg:h-[26rem]
+              relative w-64 h-80 md:w-72 md:h-96 lg:w-80 lg:h-104
               rounded-2xl overflow-hidden
               border-2 border-secondary/30
               shadow-[0_0_60px_rgba(220,29,70,0.15)]
@@ -86,26 +73,26 @@ export default function Presentation() {
                             }}
                         />
                         {/* gradient overlay at the bottom */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-transparent to-transparent" />
+                        <div className="absolute inset-0 bg-linear-to-t from-foreground/70 via-transparent to-transparent" />
 
                         {/* name tag inside frame */}
                         <div className="absolute bottom-4 left-4 right-4">
-                            <p className="font-serif text-secondary text-lg leading-tight">Hugo Malezet</p>
+                            <p className="font-serif text-secondary text-lg leading-tight">{presentationContent.firstName} {presentationContent.surname}</p>
                             <p className="text-background/70 text-xs uppercase tracking-widest mt-0.5">
-                                Développeur &amp; Créatif
+                                {presentationContent.title}
                             </p>
                         </div>
                     </div>
 
                     {/* contact / social line */}
                     <div className="flex gap-4 text-background/50 text-sm">
-                        <span>📍 France</span>
+                        <span>📍 {presentationContent.location}</span>
                         <span>•</span>
                         <a
-                            href="mailto:contact@hugo-malezet.fr"
+                            href={`mailto:${presentationContent.contactEmail}`}
                             className="hover:text-secondary transition-colors duration-300 underline-center"
                         >
-                            contact@hugo-malezet.fr
+                            {presentationContent.contactEmail}
                         </a>
                     </div>
                 </div>
@@ -117,31 +104,15 @@ export default function Presentation() {
                     <div>
                         <SectionLabel>Présentation</SectionLabel>
                         <h2 className="font-serif text-4xl md:text-5xl text-secondary mt-2 leading-snug">
-                            Enchanté,<br />je suis Hugo.
+                            Enchanté,<br />je suis {presentationContent.firstName}.
                         </h2>
                     </div>
 
                     {/* bio paragraphs */}
                     <div className="space-y-5 text-background/80 leading-relaxed max-w-prose text-[1.0625rem]">
-                        <p>
-                            Passionné par la création d'expériences numériques qui allient{" "}
-                            <span className="text-secondary font-semibold">esthétique</span> et{" "}
-                            <span className="text-secondary font-semibold">performance</span>, je suis
-                            développeur front-end et designer basé en France. J'ai à cœur de construire
-                            des interfaces qui racontent une histoire — chaque pixel, chaque interaction
-                            pensés pour l'utilisateur.
-                        </p>
-                        <p>
-                            Mon univers créatif est fortement influencé par la fantasy, le world-building et
-                            la narration visuelle. Ces inspirations se retrouvent naturellement dans mes projets :
-                            des univers cohérents, une attention particulière aux détails, et une volonté permanente
-                            de dépasser le simple « ça fonctionne » pour atteindre le « ça captive ».
-                        </p>
-                        <p>
-                            En dehors du code, vous me trouverez à écouter de la musique orchestrale, à construire
-                            des récits imaginaires, ou à explorer de nouvelles technologies qui me permettront de
-                            repousser encore les limites de ce que je crée.
-                        </p>
+                        {presentationContent.paragraphs.map((p, i) => (
+                            <p key={i}>{p}</p>
+                        ))}
                     </div>
 
                     {/* divider */}
@@ -151,19 +122,7 @@ export default function Presentation() {
                     <div>
                         <SectionLabel>Compétences clés</SectionLabel>
                         <div className="mt-4 flex flex-wrap gap-2">
-                            {[
-                                { name: "HTML", icon: <SiHtml5 /> },
-                                { name: "CSS", icon: <SiCss /> },
-                                { name: "Svelte", icon: <SiSvelte /> },
-                                { name: "C#", icon: <TbBrandCSharp /> },
-                                { name: "React / Next.js", icon: <SiReact /> },
-                                { name: "JavaScript", icon: <SiJavascript /> },
-                                { name: "TypeScript", icon: <SiTypescript /> },
-                                { name: "Node.js", icon: <SiNodedotjs /> },
-                                { name: "UX / UI Design", icon: <MdOutlineDesignServices /> },
-                                { name: "Git", icon: <SiGit /> },
-                                { name: "Figma", icon: <SiFigma /> },
-                            ].map((s) => (
+                            {presentationContent.skills.map((s) => (
                                 <SkillPill key={s.name} icon={s.icon}>{s.name}</SkillPill>
                             ))}
                         </div>
@@ -176,7 +135,7 @@ export default function Presentation() {
               italic text-background/50 text-sm leading-relaxed
             "
                     >
-                        « Je ne crée pas seulement ce qui est demandé — je crée ce qui est mémorable. »
+                        « {presentationContent.quote} »
                     </blockquote>
                 </div>
             </div>
