@@ -1,6 +1,19 @@
 "use client";
 
 import React from "react";
+import {
+    SiReact,
+    SiJavascript,
+    SiTypescript,
+    SiNodedotjs,
+    SiGit,
+    SiCss,
+    SiFigma,
+    SiHtml5,
+    SiSvelte
+} from "react-icons/si";
+import { MdOutlineDesignServices } from "react-icons/md";
+import { TbBrandCSharp } from "react-icons/tb";
 
 import SkillPill from "../common/SkillPill";
 
@@ -64,7 +77,7 @@ export default function Presentation() {
                     >
                         {/* Replace /placeholder_portrait.jpg with your actual photo */}
                         <img
-                            src="/placeholder_portrait.jpg"
+                            src="/DangoPP.jpg"
                             alt="Hugo Malezet"
                             className="w-full h-full object-cover object-top"
                             onError={(e) => {
@@ -139,14 +152,17 @@ export default function Presentation() {
                         <SectionLabel>Compétences clés</SectionLabel>
                         <div className="mt-4 flex flex-wrap gap-2">
                             {[
-                                { name: "React / Next.js", icon: "⚛️" },
-                                { name: "JavaScript", icon: "🟨" },
-                                { name: "TypeScript", icon: "📘" },
-                                { name: "CSS avancé", icon: "🎨" },
-                                { name: "UX / UI Design", icon: "✨" },
-                                { name: "Node.js", icon: "🟩" },
-                                { name: "Git", icon: "📦" },
-                                { name: "Figma", icon: "🖋️" },
+                                { name: "HTML", icon: <SiHtml5 /> },
+                                { name: "CSS", icon: <SiCss /> },
+                                { name: "Svelte", icon: <SiSvelte /> },
+                                { name: "C#", icon: <TbBrandCSharp /> },
+                                { name: "React / Next.js", icon: <SiReact /> },
+                                { name: "JavaScript", icon: <SiJavascript /> },
+                                { name: "TypeScript", icon: <SiTypescript /> },
+                                { name: "Node.js", icon: <SiNodedotjs /> },
+                                { name: "UX / UI Design", icon: <MdOutlineDesignServices /> },
+                                { name: "Git", icon: <SiGit /> },
+                                { name: "Figma", icon: <SiFigma /> },
                             ].map((s) => (
                                 <SkillPill key={s.name} icon={s.icon}>{s.name}</SkillPill>
                             ))}
