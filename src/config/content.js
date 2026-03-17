@@ -59,12 +59,14 @@ export const presentationContent = {
         {
             title: "World Building & Écriture",
             description: "Créer des mythes, forger des lois divines et dessiner les contours de civilisations oubliées. Le world-building est bien plus qu'une toile de fond pour moi : c'est un laboratoire d'idées où la narration rencontre la logique architecturale.",
-            image: "dragon_symbols/Artrish.png"
+            image: "passions/everything.svg",
+            bgImage: "/royaume_augeaime.jpg"
         },
         {
             title: "Musique Japonaise Moderne",
             description: "Rythmes effrénés, fusions de genres et mélodies synthétiques. De la scène Vocaloid (Hatsune Miku) au math-rock, la musique japonaise moderne m'accompagne au quotidien ; elle est une source inépuisable d'énergie et d'inspiration créative.",
-            image: "dragon_symbols/Artrish.png"
+            image: "passions/ne.svg",
+            bgImage: "/hatsune_miku.png"
         }
     ]
 };
