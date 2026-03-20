@@ -8,10 +8,20 @@ import {
     SiCss,
     SiFigma,
     SiHtml5,
-    SiSvelte
+    SiSvelte,
+    SiTailwindcss,
+    SiNextdotjs,
+    SiPostgresql,
+    SiMongodb,
+    SiDocker,
+    SiFirebase,
+    SiVercel,
+    SiVite,
+    SiVuedotjs,
+    SiSass,
 } from "react-icons/si";
-import { MdOutlineDesignServices } from "react-icons/md";
-import { TbBrandCSharp } from "react-icons/tb";
+import { MdOutlineDesignServices, MdAnimation } from "react-icons/md";
+import { TbBrandCSharp, TbBrandThreejs } from "react-icons/tb";
 
 export const presentationContent = {
     firstName: "Hugo",
@@ -53,6 +63,38 @@ export const presentationContent = {
         { name: "UX / UI Design", icon: <MdOutlineDesignServices /> },
         { name: "Git", icon: <SiGit /> },
         { name: "Figma", icon: <SiFigma /> },
+    ],
+    skillsSubtitle: "Technologies & Outils",
+    skills_masteries: [
+        // — Languages
+        { name: "HTML", icon: <SiHtml5 /> },
+        { name: "CSS", icon: <SiCss /> },
+        { name: "JavaScript", icon: <SiJavascript /> },
+        { name: "TypeScript", icon: <SiTypescript /> },
+        { name: "C#", icon: <TbBrandCSharp /> },
+        // — Frameworks & Libraries
+        { name: "React", icon: <SiReact /> },
+        { name: "Next.js", icon: <SiNextdotjs /> },
+        { name: "Svelte", icon: <SiSvelte /> },
+        { name: "Vue.js", icon: <SiVuedotjs /> },
+        { name: "Node.js", icon: <SiNodedotjs /> },
+        { name: "Three.js", icon: <TbBrandThreejs /> },
+        // — Styling
+        { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+        { name: "Sass", icon: <SiSass /> },
+        // — Back-end & DB
+        { name: "PostgreSQL", icon: <SiPostgresql /> },
+        { name: "MongoDB", icon: <SiMongodb /> },
+        { name: "Firebase", icon: <SiFirebase /> },
+        // — Build & Deploy
+        { name: "Vite", icon: <SiVite /> },
+        { name: "Docker", icon: <SiDocker /> },
+        { name: "Vercel", icon: <SiVercel /> },
+        { name: "Git", icon: <SiGit /> },
+        // — Design
+        { name: "Figma", icon: <SiFigma /> },
+        { name: "UX / UI Design", icon: <MdOutlineDesignServices /> },
+        { name: "Motion Design", icon: <MdAnimation /> },
     ],
     passionsSubtitle: "Au-delà du code, je nourris d'autres passions",
     passions: [
