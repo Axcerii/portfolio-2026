@@ -17,11 +17,31 @@ import {
     SiFirebase,
     SiVercel,
     SiVite,
-    SiVuedotjs,
     SiSass,
+    SiMake,
+    SiFlutter,
+    SiPhp,
+    SiCakephp,
+    SiGoogleappsscript,
+    SiNginx,
+    SiApache,
+    SiAnsible,
+    SiJquery,
+    SiLinux,
+    SiPrisma,
+    SiMysql,
+    SiModx,
+    SiDavinciresolve,
+    SiKrita,
+    SiBlender,
+    SiPhotopea,
+    SiObsstudio,
 } from "react-icons/si";
-import { MdOutlineDesignServices, MdAnimation } from "react-icons/md";
-import { TbBrandCSharp, TbBrandThreejs } from "react-icons/tb";
+import { TbBrandCSharp, TbSeo, TbBrandAdobeIllustrator, TbBrandAdobePhotoshop, TbBrandAdobePremier } from "react-icons/tb";
+import { FaAngular, FaBootstrap, FaBrain, FaPaintBrush, FaGoogle, FaMobileAlt } from "react-icons/fa";
+import { FaB } from "react-icons/fa6";
+import { BiLogoVisualStudio, BiAccessibility } from "react-icons/bi";
+import { GiSpellBook } from "react-icons/gi";
 
 export const presentationContent = {
     firstName: "Hugo",
@@ -60,41 +80,87 @@ export const presentationContent = {
         { name: "JavaScript", icon: <SiJavascript /> },
         { name: "TypeScript", icon: <SiTypescript /> },
         { name: "Node.js", icon: <SiNodedotjs /> },
-        { name: "UX / UI Design", icon: <MdOutlineDesignServices /> },
         { name: "Git", icon: <SiGit /> },
         { name: "Figma", icon: <SiFigma /> },
     ],
     skillsSubtitle: "Technologies & Outils",
     skills_masteries: [
-        // — Languages
-        { name: "HTML", icon: <SiHtml5 /> },
-        { name: "CSS", icon: <SiCss /> },
-        { name: "JavaScript", icon: <SiJavascript /> },
-        { name: "TypeScript", icon: <SiTypescript /> },
-        { name: "C#", icon: <TbBrandCSharp /> },
-        // — Frameworks & Libraries
-        { name: "React", icon: <SiReact /> },
-        { name: "Next.js", icon: <SiNextdotjs /> },
-        { name: "Svelte", icon: <SiSvelte /> },
-        { name: "Vue.js", icon: <SiVuedotjs /> },
-        { name: "Node.js", icon: <SiNodedotjs /> },
-        { name: "Three.js", icon: <TbBrandThreejs /> },
-        // — Styling
-        { name: "Tailwind CSS", icon: <SiTailwindcss /> },
-        { name: "Sass", icon: <SiSass /> },
-        // — Back-end & DB
-        { name: "PostgreSQL", icon: <SiPostgresql /> },
-        { name: "MongoDB", icon: <SiMongodb /> },
-        { name: "Firebase", icon: <SiFirebase /> },
-        // — Build & Deploy
-        { name: "Vite", icon: <SiVite /> },
-        { name: "Docker", icon: <SiDocker /> },
-        { name: "Vercel", icon: <SiVercel /> },
-        { name: "Git", icon: <SiGit /> },
-        // — Design
-        { name: "Figma", icon: <SiFigma /> },
-        { name: "UX / UI Design", icon: <MdOutlineDesignServices /> },
-        { name: "Motion Design", icon: <MdAnimation /> },
+        {
+            title: "Langages",
+            skills: [
+                { name: "HTML", icon: <SiHtml5 /> },
+                { name: "CSS", icon: <SiCss /> },
+                { name: "JavaScript", icon: <SiJavascript /> },
+                { name: "TypeScript", icon: <SiTypescript /> },
+                { name: "PHP", icon: <SiPhp /> },
+                { name: "C#", icon: <TbBrandCSharp /> },
+                { name: "Modx", icon: <SiModx /> },
+            ],
+        },
+        {
+            title: "Frameworks",
+            skills: [
+                { name: "React", icon: <SiReact /> },
+                { name: "Next.js", icon: <SiNextdotjs /> },
+                { name: "Svelte", icon: <SiSvelte /> },
+                { name: "Angular", icon: <FaAngular /> },
+                { name: "Node.js", icon: <SiNodedotjs /> },
+                { name: "CakePHP", icon: <SiCakephp /> },
+                { name: "Flutter", icon: <SiFlutter /> },
+                { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+                { name: "Sass", icon: <SiSass /> },
+                { name: "Bootstrap", icon: <FaBootstrap /> },
+                { name: "jQuery", icon: <SiJquery /> },
+                { name: "Bubble.io", icon: <FaB /> },
+                { name: "Google Apps Script", icon: <SiGoogleappsscript /> },
+                { name: "Make", icon: <SiMake /> },
+            ],
+        },
+        {
+            title: "Données & Back-end",
+            skills: [
+                { name: "PostgreSQL", icon: <SiPostgresql /> },
+                { name: "MySQL", icon: <SiMysql /> },
+                { name: "MongoDB", icon: <SiMongodb /> },
+                { name: "Firebase", icon: <SiFirebase /> },
+                { name: "Prisma", icon: <SiPrisma /> },
+                { name: "Node.js", icon: <SiNodedotjs /> },
+            ],
+        },
+        {
+            title: "DevOps & Outils",
+            skills: [
+                { name: "Git", icon: <SiGit /> },
+                { name: "Docker", icon: <SiDocker /> },
+                { name: "Nginx", icon: <SiNginx /> },
+                { name: "Apache", icon: <SiApache /> },
+                { name: "Linux", icon: <SiLinux /> },
+                { name: "Ansible", icon: <SiAnsible /> },
+                { name: "Vite", icon: <SiVite /> },
+                { name: "Vercel", icon: <SiVercel /> },
+                { name: "Visual Studio", icon: <BiLogoVisualStudio /> },
+            ],
+        },
+        {
+            title: "Design & Créatif",
+            skills: [
+                { name: "Figma", icon: <SiFigma /> },
+                { name: "Adobe Illustrator", icon: <TbBrandAdobeIllustrator /> },
+                { name: "Adobe Photoshop", icon: <TbBrandAdobePhotoshop /> },
+                { name: "Adobe Premiere Pro", icon: <TbBrandAdobePremier /> },
+                { name: "DaVinci Resolve", icon: <SiDavinciresolve /> },
+                { name: "Krita", icon: <SiKrita /> },
+                { name: "Blender", icon: <SiBlender /> },
+                { name: "Photopea", icon: <SiPhotopea /> },
+                { name: "OBS Studio", icon: <SiObsstudio /> },
+                { name: "UI/UX", icon: <FaPaintBrush /> },
+                { name: "SEO", icon: <TbSeo /> },
+                { name: "SEA", icon: <FaGoogle /> },
+                { name: "Accessibilité", icon: <BiAccessibility /> },
+                { name: "Storytelling", icon: <GiSpellBook /> },
+                { name: "Mobile", icon: <FaMobileAlt /> },
+            ],
+        },
     ],
     passionsSubtitle: "Au-delà du code, je nourris d'autres passions",
     passions: [
