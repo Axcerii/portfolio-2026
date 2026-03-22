@@ -5,6 +5,7 @@ import FrameBorder from "@/lib/components/hero/FrameBorder";
 import DragonLink from "@/lib/components/nav/dragon_link";
 import Presentation from "@/lib/components/presentations/Presentation";
 import Passions from "@/lib/components/passions/Passions";
+import Projects from "@/lib/components/projects/Projects";
 import Skills from "@/lib/components/skills/Skills";
 
 export default function Home() {
@@ -150,6 +151,7 @@ export default function Home() {
 
       <Presentation />
       <Passions />
+      <Projects />
       <Skills />
     </main>
   );
