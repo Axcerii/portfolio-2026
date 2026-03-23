@@ -178,3 +178,13 @@ export const presentationContent = {
         }
     ]
 };
+
+// ─── Contact ───────────────────────────────────────────────────────────
+
+export const contactContent = {
+    email: "hugo.malezet@gmail.com",
+    linkedin: "https://www.linkedin.com/in/hugo-malezet/",
+    github: "https://github.com/hugo-malezet",
+    cvFile: "/CV_Hugo_Malezet.pdf"
+};
+

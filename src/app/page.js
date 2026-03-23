@@ -7,6 +7,7 @@ import Presentation from "@/lib/components/presentations/Presentation";
 import Passions from "@/lib/components/passions/Passions";
 import Experiences from "@/lib/components/experiences/Experiences";
 import Projects from "@/lib/components/projects/Projects";
+import Contact from "@/lib/components/contact/Contact";
 import Skills from "@/lib/components/skills/Skills";
 
 export default function Home() {
@@ -155,6 +156,7 @@ export default function Home() {
       <Experiences />
       <Projects />
       <Skills />
+      <Contact />
     </main>
   );
 }
