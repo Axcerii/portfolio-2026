@@ -19,9 +19,9 @@ function SectionLabel({ children }) {
 function ContactButton({ href, icon, label, isDownload, colorClass }) {
     const Component = isDownload ? "a" : "a";
     const downloadProps = isDownload ? { download: true } : {};
-    
+
     return (
-        <Component 
+        <Component
             href={href}
             target={!isDownload ? "_blank" : "_self"}
             rel={!isDownload ? "noopener noreferrer" : ""}
@@ -88,7 +88,7 @@ export default function Contact() {
 
             {/* ── Main heading for section ── */}
             <div className="relative z-10 mx-auto max-w-6xl mb-20 text-center">
-                <SectionLabel>Me contacter</SectionLabel>
+                <SectionLabel>Mes coordonées</SectionLabel>
                 <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-background mt-3 leading-tight">
                     Restons en <span className="text-accent">Contact</span>
                 </h2>
@@ -98,41 +98,41 @@ export default function Contact() {
             {/* ── Links Grid ── */}
             <div className="relative z-10 mx-auto max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                 {contactContent.email && (
-                    <ContactButton 
-                        href={`mailto:${contactContent.email}`} 
-                        icon={<FiMail />} 
-                        label="Email" 
+                    <ContactButton
+                        href={`mailto:${contactContent.email}`}
+                        icon={<FiMail />}
+                        label="malezethp@gmail.com"
                     />
                 )}
-                
+
                 {contactContent.linkedin && (
-                    <ContactButton 
-                        href={contactContent.linkedin} 
-                        icon={<FiLinkedin />} 
-                        label="LinkedIn" 
+                    <ContactButton
+                        href={contactContent.linkedin}
+                        icon={<FiLinkedin />}
+                        label="Hugo Malezet"
                     />
                 )}
-                
+
                 {contactContent.github && (
-                    <ContactButton 
-                        href={contactContent.github} 
-                        icon={<FiGithub />} 
-                        label="GitHub" 
+                    <ContactButton
+                        href={contactContent.github}
+                        icon={<FiGithub />}
+                        label="Axcerii"
                     />
                 )}
-                
+
                 {contactContent.cvFile && (
-                    <ContactButton 
-                        href={contactContent.cvFile} 
-                        icon={<FiDownload />} 
-                        label="Mon CV" 
+                    <ContactButton
+                        href={contactContent.cvFile}
+                        icon={<FiDownload />}
+                        label="Mon CV"
                         isDownload={true}
                     />
                 )}
             </div>
-            
+
             <div className="relative z-10 mt-32 text-center text-background/40 text-sm tracking-widest uppercase">
-                Développé avec art par Hugo Malezet
+                © 2026 Hugo Malezet. Tous droits réservés.
             </div>
         </section>
     );
