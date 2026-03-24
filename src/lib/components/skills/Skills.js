@@ -78,8 +78,8 @@ function SkillColumn({ title, skills, direction, duration }) {
    Column configs
    ──────────────────────────────────────────────────────────── */
 const COLUMN_CONFIGS = [
-    { direction: "up", duration: 16 },
-    { direction: "down", duration: 24 },
+    { direction: "up", duration: 24 },
+    { direction: "down", duration: 13 },
     { direction: "up", duration: 19 },
     { direction: "down", duration: 13 },
     { direction: "up", duration: 28 },

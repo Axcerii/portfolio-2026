@@ -94,12 +94,12 @@ export const presentationContent = {
                 { name: "TypeScript", icon: <SiTypescript /> },
                 { name: "PHP", icon: <SiPhp /> },
                 { name: "C#", icon: <TbBrandCSharp /> },
-                { name: "Modx", icon: <SiModx /> },
             ],
         },
         {
             title: "Frameworks",
             skills: [
+                { name: "Modx", icon: <SiModx /> },
                 { name: "React", icon: <SiReact /> },
                 { name: "Next.js", icon: <SiNextdotjs /> },
                 { name: "Svelte", icon: <SiSvelte /> },
