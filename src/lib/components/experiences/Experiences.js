@@ -121,9 +121,9 @@ export default function Experiences() {
                     <div
                         className="
                             w-0 h-0 
-                            border-l-[8px] border-l-transparent 
-                            border-r-[8px] border-r-transparent 
-                            border-b-[12px] border-b-primary
+                            border-l-8 border-l-transparent 
+                            border-r-8 border-r-transparent 
+                            border-b-12 border-b-primary
                             filter drop-shadow-[0_0_10px_rgba(220,29,70,0.8)]
                             animate-bounce
                         "

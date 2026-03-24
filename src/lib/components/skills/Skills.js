@@ -109,7 +109,7 @@ export default function Skills() {
                     flex gap-3 w-full px-3
                     h-[420px] sm:h-[480px] lg:h-[560px]
                     overflow-hidden
-                    [mask-image:linear-gradient(to_bottom,transparent_0%,black_12%,black_80%,transparent_100%)]
+                    mask-[linear-gradient(to_bottom,transparent_0%,black_12%,black_80%,transparent_100%)]
                 "
             >
                 {skills_masteries.map((col, i) => (
