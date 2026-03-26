@@ -1,43 +1,74 @@
 import React from "react";
-import { SiReact, SiNextdotjs, SiTailwindcss, SiNodedotjs, SiFirebase } from "react-icons/si";
+import { SiReact, SiNextdotjs, SiTailwindcss, SiFirebase, SiPhp, SiMysql, SiJquery, SiJavascript, SiModx, SiTypescript, SiSvelte, SiPrisma, SiDocker } from "react-icons/si";
+import { TbBrandAdobeIllustrator, TbBrandAdobePhotoshop, TbBrandAdobePremier } from "react-icons/tb";
 import { TbBrandCSharp } from "react-icons/tb";
 
 export const projectsContent = [
     {
         id: "projet-1",
-        title: "Chronicles of Aethelgard",
-        subtitle: "Un RPG de Dark Fantasy",
-        image: "/royaume_augeaime.jpg", // Placeholder image from the passions
-        description: "Un jeu de rôle immersif en ligne, axé sur la narration et les choix des joueurs. Développé avec un moteur maison en C# pour le backend et React pour interfaces web de gestion de personnage.",
+        title: "Last Fragment",
+        subtitle: "Un Jeu de Rôle",
+        image: "/royaume_augeaime.jpg",
+        description: "Résumer Last Fragment en quelques mots serait impossible. Au-delà d'un simple projet, c'est mon âme qui se trouve dans cette œuvre. J'ai réalisé des bots, des sites internet, d'innombrables assets et consacré des heures d'écriture à ce projet, qui n'a pour simple but que de nous divertir et de faire grandir mes amis et moi. Il s'agit d'un jeu de rôle papier, comme Donjons et Dragons, mais dans mon propre univers. Un site internet existe et me permet de regrouper mes informations en un seul endroit, ainsi que de m'aider à organiser mes sessions de jeu en ligne. Une version 2 est en cours et est disponible sur mon GitHub.",
         images: [
             "/royaume_augeaime.jpg",
-            "/royaume_augeaime.jpg",
-            "/royaume_augeaime.jpg"
+            "/projets/lf/serena_eye.jpg",
+            "/projets/lf/lf_background.png",
+            "/projets/lf/dragon_symbol.jpg",
+            "/projets/lf/saxifra.jpg",
+            "/projets/lf/fiche_personnage.png",
+            "/projets/lf/bestiaire.png",
+            "/projets/lf/admin_combat.png"
         ],
         skills: [
-            { name: "C#", icon: <TbBrandCSharp /> },
-            { name: "React", icon: <SiReact /> },
-            { name: "Node.js", icon: <SiNodedotjs /> }
+            { name: "PHP", icon: <SiPhp /> },
+            { name: "Photoshop", icon: <TbBrandAdobePhotoshop /> },
+            { name: "Illustrator", icon: <TbBrandAdobeIllustrator /> },
+            { name: "Premier", icon: <TbBrandAdobePremier /> },
+            { name: "Javascript", icon: <SiJavascript /> },
+            { name: "jQuery", icon: <SiJquery /> },
+            { name: "MySql", icon: <SiMysql /> },
         ],
-        link: "https://example.com/aethelgard",
-        github: "https://github.com/example/aethelgard"
+        link: "https://lastfragment.alwaysdata.net/",
+        github: "https://github.com/Axcerii/LastFragment"
     },
     {
         id: "projet-2",
-        title: "Nexus Dashboard",
-        subtitle: "Interface d'Analytique",
-        image: "/hatsune_miku.png", // Placeholder image
-        description: "Un tableau de bord moderne et performant pour la visualisation de données en temps réel. Construit avec Next.js et stylisé avec Tailwind CSS pour une esthétique épurée.",
+        title: "RenaultGroup - OneHealth",
+        subtitle: "Application de mutuelle RenaultGroup",
+        image: "/projets/onehealth/onehealth.png",
+        description: "Travail dans le cadre d'un stage alterné chez Intersel, Livinweb. Création d'un site internet pour les droits à la santé des salariés de RenaultGroup. Le site permet de consulter ses droits à la santé dans toutes les langues où RenaultGroup est implanté. Le site utilise un système de CMS créer spécifiquement pour les clients de l'agence sur lequel j'ai pu travaillé. J'ai également travaillé sur l'accessibilité du site pour les personnes en situation de handicaps.",
         images: [
-            "/hatsune_miku.png",
-            "/hatsune_miku.png"
+            "/projets/onehealth/onehealth.png",
+            "/projets/onehealth/onehealth2.png"
         ],
         skills: [
-            { name: "Next.js", icon: <SiNextdotjs /> },
             { name: "Tailwind CSS", icon: <SiTailwindcss /> },
-            { name: "Firebase", icon: <SiFirebase /> }
+            { name: "ModX", icon: <SiModx /> },
+            { name: "Javascript", icon: <SiJavascript /> },
+            { name: "jQuery", icon: <SiJquery /> },
+            { name: "MySql", icon: <SiMysql /> },
         ],
-        link: "https://example.com/nexus",
-        // No GitHub link for this one to demonstrate conditional rendering
+        link: "https://onehealth.renaultgroup.com/",
+    },
+    {
+        id: "projet-3",
+        title: "Bwhat",
+        subtitle: "Application d'Achat de Boîte Détente",
+        image: "/projets/bwhat/bwhat.webp",
+        description: "Projet fictif de création d'une application d'achat de boîte détente. Une vente de boîte pour se relaxer et se déconnecter des réseaux sociaux et des tracas du quotidien. Si seulement c'était réel...",
+        images: [
+            "/projets/bwhat/bwhat1.png",
+            "/projets/bwhat/bwhat2.png",
+            "/projets/bwhat/bwhat3.png"
+        ],
+        skills: [
+            { name: "Typescript", icon: <SiTypescript /> },
+            { name: "SvelteKit", icon: <SiSvelte /> },
+            { name: "MySql", icon: <SiMysql /> },
+            { name: "Prisma", icon: <SiPrisma /> },
+            { name: "Docker", icon: <SiDocker /> },
+        ],
+        github: "https://github.com/Axcerii/bwhat/tree/master",
     }
 ];

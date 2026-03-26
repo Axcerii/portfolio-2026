@@ -23,7 +23,7 @@ export default function Passions() {
                 ${hovered === 1 ? 'translate-x-[15vw]' : hovered === 2 ? '-translate-x-[25vw]' : '-translate-x-1/2'}`}
             >
                 <div className="bg-foreground/40 backdrop-blur-md px-6 py-3 rounded-full border border-background/10 shadow-xl">
-                    <h3 className="font-serif text-lg lg:text-xl text-background tracking-wider">
+                    <h3 className="font-serif text-lg lg:text-xl text-background tracking-wider text-center">
                         {presentationContent.passionsSubtitle}
                     </h3>
                 </div>

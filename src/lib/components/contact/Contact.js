@@ -132,7 +132,8 @@ export default function Contact() {
             </div>
 
             <div className="relative z-10 mt-32 text-center text-background/40 text-sm tracking-widest uppercase">
-                © 2026 Hugo Malezet. Tous droits réservés.
+                © 2026 Hugo Malezet. Tous droits réservés. <br />
+                Image d'Hatsune Miku par <a href="https://x.com/keigarou" className="underline-center text-accent" target="_blank" rel="noopener noreferrer">KEI</a> sous Licence Creative Common <a href="https://piapro.net/intl/en_for_creators.html" className="underline-center text-accent" target="_blank" rel="noopener noreferrer">(CC-BY-NC)</a>
             </div>
         </section>
     );

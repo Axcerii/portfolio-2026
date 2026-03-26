@@ -82,7 +82,7 @@ const COLUMN_CONFIGS = [
     { direction: "down", duration: 13 },
     { direction: "up", duration: 19 },
     { direction: "down", duration: 13 },
-    { direction: "up", duration: 28 },
+    { direction: "up", duration: 14 },
 ];
 
 /* ────────────────────────────────────────────────────────────
@@ -97,7 +97,7 @@ export default function Skills() {
             aria-labelledby="skills-heading"
             className="relative py-20 overflow-hidden bg-foreground"
         >
-            <p className="text-xl uppercase tracking-widest text-background mb-14 px-6 w-1/2 mx-auto">
+            <p className="text-xl tracking-widest text-background mb-14 px-6 w-9/10 md:w-1/2 mx-auto">
                 {skillsSubtitle}
             </p>
 

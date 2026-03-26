@@ -10,7 +10,7 @@ export default function FrameBorder(props) {
     }
 
     return (
-        <div className="w-screen h-12 relative bg-[url('/frame_border_background.jpg')] flex flex-col justify-between items-center md:h-screen md:w-30 border-2 border-secondary z-10">
+        <div className="w-screen h-12 relative bg-[url('/frame_border_background.jpg')] flex flex-col justify-between items-center md:h-screen md:w-30 border-2 border-secondary z-1100 md:z-10">
             <div className="justify-center items-center w-full h-1/4 px-10 max-h-9/10 md:flex hidden">
                 <img
                     src="/hugo_artrish.png"

@@ -47,28 +47,30 @@ export const presentationContent = {
     firstName: "Hugo",
     surname: "Malezet",
     title: "Développeur & Créatif",
-    location: "France",
-    contactEmail: "contact@hugo-malezet.fr",
-    quote: "Je ne crée pas seulement ce qui est demandé — je crée ce qui est mémorable.",
+    location: "France, Paris",
+    contactEmail: "malezethp@gmail.com",
+    quote: "Sur un échiquier, je ne mangerais qu'en diagonale. Et de côté une fois par an.",
+    image: "/Photo2.png",
     paragraphs: [
         <>
-            Passionné par la création d'expériences numériques qui allient{" "}
-            <span className="text-secondary font-semibold">esthétique</span> et{" "}
-            <span className="text-secondary font-semibold">performance</span>, je suis
-            développeur front-end et designer basé en France. J'ai à cœur de construire
-            des interfaces qui racontent une histoire — chaque pixel, chaque interaction
-            pensés pour l'utilisateur.
+            Passionné par de multiples choses, qui m’ont fait vaciller {<span className="text-secondary font-bold">d'apprentissage</span>}, en compétences, avant
+            de m’amener dans cet univers par une suite étonnante, quoique prévisible, du développement web.
         </>,
         <>
-            Mon univers créatif est fortement influencé par la fantasy, le world-building et
-            la narration visuelle. Ces inspirations se retrouvent naturellement dans mes projets :
-            des univers cohérents, une attention particulière aux détails, et une volonté permanente
-            de dépasser le simple « ça fonctionne » pour atteindre le « ça captive ».
+            Depuis tout jeune, je suis plongé dans le monde de l’informatique, de par ma famille ou encore mes passions.
+            Comme pour tous les enfants, viennent les jeux vidéos, l’envie d’{<span className="text-secondary font-bold">apprendre</span>}, l’envie de {<span className="text-secondary font-bold">construire</span>}, l’envie de {<span className="text-secondary font-bold">partager</span>}.
+            Je {<span className="text-secondary font-bold">crée</span>} mon premier forum avec 0 visiteur sur les outils no-code de la fin de la décennie 2000.
         </>,
         <>
-            En dehors du code, vous me trouverez à écouter de la musique orchestrale, à construire
-            des récits imaginaires, ou à explorer de nouvelles technologies qui me permettront de
-            repousser encore les limites de ce que je crée.
+            Ma soif de créativité me pousse à apprendre de mon côté, en grandissant, des outils multimédias comme le défunt Photofiltre Studio X ou encore Windows Movie Maker.
+            Pour résumer, j’ai toujours été un gamin qui voulait évoluer et me diversifier, et aujourd’hui je suis un adulte qui veut continuer à {<span className="text-secondary font-bold">apprendre</span>}.
+        </>,
+        <>
+            Un métier où l’on peut {<span className="text-secondary font-bold">apprendre</span>} en continu, {<span className="text-secondary font-bold">créer</span>}, {<span className="text-secondary font-bold">partager</span>} et {<span className="text-secondary font-bold">s’amuser</span>}, il n’y en a pas 37 et me voilà en études de développement web
+            à la recherche d’une alternance pour ma seconde année de Master en tant que Développeur Full Stack.
+        </>,
+        <>
+            Et si ce paragraphe vous a ennuyé, alors, amusez-vous à jeter un œil à mes {<a href="/#projets" className="text-accent hover:text-primary underline-center">projets</a>}, et surtout, merci de me découvrir.
         </>
     ],
     skills: [
@@ -79,11 +81,10 @@ export const presentationContent = {
         { name: "React / Next.js", icon: <SiReact /> },
         { name: "JavaScript", icon: <SiJavascript /> },
         { name: "TypeScript", icon: <SiTypescript /> },
-        { name: "Node.js", icon: <SiNodedotjs /> },
-        { name: "Git", icon: <SiGit /> },
         { name: "Figma", icon: <SiFigma /> },
+        { name: "PHP Natif", icon: <SiPhp /> },
     ],
-    skillsSubtitle: "Technologies & Outils",
+    skillsSubtitle: "Au cours de ma carrière, j'ai acquis de nombreuses compétences et appris d'innombrables technologies. Voici une liste non-exhaustive des outils avec lesquels j'ai travaillés :",
     skills_masteries: [
         {
             title: "Langages",
@@ -158,21 +159,21 @@ export const presentationContent = {
                 { name: "SEA", icon: <FaGoogle /> },
                 { name: "Accessibilité", icon: <BiAccessibility /> },
                 { name: "Storytelling", icon: <GiSpellBook /> },
-                { name: "Mobile", icon: <FaMobileAlt /> },
+                { name: "Responsive Design", icon: <FaMobileAlt /> },
             ],
         },
     ],
-    passionsSubtitle: "Au-delà du code, je nourris d'autres passions",
+    passionsSubtitle: "Mes passions sont la raison de qui je suis",
     passions: [
         {
             title: "World Building & Écriture",
-            description: "Créer des mythes, forger des lois divines et dessiner les contours de civilisations oubliées. Le world-building est bien plus qu'une toile de fond pour moi : c'est un laboratoire d'idées où la narration rencontre la logique architecturale.",
+            description: "Écrire l’histoire, pour moi, ça signifie parler de conflit, de construire des religions, d’analyser notre monde afin d’en créer une copie fantastique immatérielle présente dans mon esprit, et surtout celui de mes lecteurs et joueurs. L’écriture et le world building n’est que l’une des faces du dé qu’est ma passion pour les jeux de rôles papiers, et dieu sait combien il y en a.",
             image: "passions/everything.svg",
             bgImage: "/royaume_augeaime.jpg"
         },
         {
             title: "Musique Japonaise Moderne",
-            description: "Rythmes effrénés, fusions de genres et mélodies synthétiques. De la scène Vocaloid (Hatsune Miku) au math-rock, la musique japonaise moderne m'accompagne au quotidien ; elle est une source inépuisable d'énergie et d'inspiration créative.",
+            description: "Un fil turquoise est apparu quand j’étais jeune, et il ne m’a jamais lâché. La musique japonaise m’a, non seulement, marqué, mais aussi influencé. Mes modèles d’hier et d’aujourd’hui, mon style, ma façon de penser, de raisonner jusqu’à mes designs, tout cela a été renversé par une technologie présentant pourtant une légende non-vivante. Je serai ravi de parler autour de ce sujet avec vous.",
             image: "passions/ne.svg",
             bgImage: "/hatsune_miku.png"
         }
