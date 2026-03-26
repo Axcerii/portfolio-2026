@@ -104,7 +104,7 @@ export default function Experiences() {
             <div className="relative z-10 mx-auto max-w-6xl mb-20 md:mb-28 text-center">
                 <SectionLabel>Parcours</SectionLabel>
                 <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-secondary mt-3 leading-tight">
-                    Mon <span className="text-primary">Expérience</span>
+                    Comment suis-je <span className="text-primary">arrivé</span> ici ?
                 </h2>
                 <div className="h-px w-24 bg-primary/40 mx-auto mt-8" />
             </div>
@@ -121,9 +121,9 @@ export default function Experiences() {
                     <div
                         className="
                             w-0 h-0 
-                            border-l-[8px] border-l-transparent 
-                            border-r-[8px] border-r-transparent 
-                            border-b-[12px] border-b-primary
+                            border-l-8 border-l-transparent 
+                            border-r-8 border-r-transparent 
+                            border-b-12 border-b-primary
                             filter drop-shadow-[0_0_10px_rgba(220,29,70,0.8)]
                             animate-bounce
                         "

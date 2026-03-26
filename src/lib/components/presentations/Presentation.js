@@ -3,6 +3,7 @@
 import React from "react";
 import SkillPill from "../common/SkillPill";
 import { presentationContent } from "@/config/content";
+import { FaLocationDot } from "react-icons/fa6";
 
 // ─── tiny reusable pieces ────────────────────────────────────────────────────
 
@@ -64,7 +65,7 @@ export default function Presentation() {
                     >
                         {/* Replace /placeholder_portrait.jpg with your actual photo */}
                         <img
-                            src="/DangoPP.jpg"
+                            src={presentationContent.image}
                             alt="Hugo Malezet"
                             className="w-full h-full object-cover object-top"
                             onError={(e) => {
@@ -86,8 +87,10 @@ export default function Presentation() {
 
                     {/* contact / social line */}
                     <div className="flex gap-4 text-background/50 text-sm">
-                        <span>📍 {presentationContent.location}</span>
-                        <span>•</span>
+                        <span className="flex items-center gap-2">
+                            <FaLocationDot />
+                            {presentationContent.location}
+                        </span>
                         <a
                             href={`mailto:${presentationContent.contactEmail}`}
                             className="hover:text-secondary transition-colors duration-300 underline-center"
@@ -104,7 +107,7 @@ export default function Presentation() {
                     <div>
                         <SectionLabel>Présentation</SectionLabel>
                         <h2 className="font-serif text-4xl md:text-5xl text-secondary mt-2 leading-snug">
-                            Enchanté,<br />je suis {presentationContent.firstName}.
+                            Bonjour, je suis {presentationContent.firstName}.
                         </h2>
                     </div>
 
@@ -120,7 +123,7 @@ export default function Presentation() {
 
                     {/* skills */}
                     <div>
-                        <SectionLabel>Compétences clés</SectionLabel>
+                        <SectionLabel>Technologies Préférées :</SectionLabel>
                         <div className="mt-4 flex flex-wrap gap-2">
                             {presentationContent.skills.map((s) => (
                                 <SkillPill key={s.name} icon={s.icon}>{s.name}</SkillPill>

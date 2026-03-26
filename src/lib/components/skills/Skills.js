@@ -78,11 +78,11 @@ function SkillColumn({ title, skills, direction, duration }) {
    Column configs
    ──────────────────────────────────────────────────────────── */
 const COLUMN_CONFIGS = [
-    { direction: "up", duration: 16 },
-    { direction: "down", duration: 24 },
+    { direction: "up", duration: 24 },
+    { direction: "down", duration: 13 },
     { direction: "up", duration: 19 },
     { direction: "down", duration: 13 },
-    { direction: "up", duration: 28 },
+    { direction: "up", duration: 14 },
 ];
 
 /* ────────────────────────────────────────────────────────────
@@ -97,7 +97,7 @@ export default function Skills() {
             aria-labelledby="skills-heading"
             className="relative py-20 overflow-hidden bg-foreground"
         >
-            <p className="text-xl uppercase tracking-widest text-background mb-14 px-6 w-1/2 mx-auto">
+            <p className="text-xl tracking-widest text-background mb-14 px-6 w-9/10 md:w-1/2 mx-auto">
                 {skillsSubtitle}
             </p>
 
@@ -109,7 +109,7 @@ export default function Skills() {
                     flex gap-3 w-full px-3
                     h-[420px] sm:h-[480px] lg:h-[560px]
                     overflow-hidden
-                    [mask-image:linear-gradient(to_bottom,transparent_0%,black_12%,black_80%,transparent_100%)]
+                    mask-[linear-gradient(to_bottom,transparent_0%,black_12%,black_80%,transparent_100%)]
                 "
             >
                 {skills_masteries.map((col, i) => (
