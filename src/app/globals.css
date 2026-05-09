@@ -85,6 +85,10 @@ a {
   transform: scaleX(1);
 }
 
+.loading-screen-background {
+  background: radial-gradient(circle, rgba(54, 44, 46, 1) 0%, rgba(97, 63, 71, 1) 39%, rgba(220, 29, 70, 1) 100%);
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
