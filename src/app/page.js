@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Eye from "@/lib/components/hero/Eye";
 import FrameBorder from "@/lib/components/hero/FrameBorder";
+import LoadingScreen from "@/lib/components/hero/LoadingScreen";
 import DragonLink from "@/lib/components/nav/dragon_link";
 import Presentation from "@/lib/components/presentations/Presentation";
 import Passions from "@/lib/components/passions/Passions";
@@ -12,6 +13,8 @@ import Skills from "@/lib/components/skills/Skills";
 
 export default function Home() {
   const [isScrollLocked, setIsScrollLocked] = useState(true);
+
+
 
   useEffect(() => {
     // ── Lock scroll until a nav link is clicked ──────────────────────────────
@@ -102,6 +105,7 @@ export default function Home() {
 
   return (
     <main className={`relative ${isScrollLocked ? "h-svh overflow-hidden" : "min-h-svh overflow-x-hidden"}`}>
+      <LoadingScreen />
       <section className="flex flex-row relative overflow-hidden w-full h-svh bg-[url('/eye_background.jpg')] bg-cover bg-center bg-no-repeat">
         <h1 className="hidden">Hugo Malezet</h1>
 
