@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🐉 Hugo Malezet - Portfolio 2026
 
-## Getting Started
+Welcome to the official repository for my interactive 2026 Developer Portfolio. 
 
-First, run the development server:
+This project is built to showcase my presentation, passions, professional experiences, and technical skills through a highly dynamic and interactive user interface. The overarching theme revolves around beautiful aesthetics, smooth animations, and mysterious "dragon" symbols that guide the user experience.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Key Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Interactive Hero (The Eye)**: A custom, interactive eye component that dynamically tracks the user's cursor while respecting boundary constraints.
+- **Dynamic Navigation System**: An immersive and sticky navigation bar utilizing glassmorphic design and custom icons to scroll smoothly between sections.
+- **Animated Loading Screen**: A custom initial loader that ensures all heavy assets (like the Hero background) are fully loaded before revealing the experience.
+- **Responsive Layout**: Thoughtfully crafted with Tailwind CSS to ensure the experience is seamless across Mobile, Tablet, and Desktop breakpoints.
+- **Scroll Hijacking (Controlled)**: Smooth, lock-and-release scrolling flow that introduces the site elements progressively.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tech Stack
 
-## Learn More
+This project leverages modern web technologies to ensure performance, maintainability, and high-end visual fidelity.
 
-To learn more about Next.js, take a look at the following resources:
+- **[Next.js](https://nextjs.org/)** - React framework for production
+- **[React](https://reactjs.org/)** - UI library (using React Hooks extensively)
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework for rapid styling
+- **[Bun](https://bun.sh/)** - Fast JavaScript runtime and package manager
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Getting Started
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+If you want to clone this repository and run the project locally, follow these steps:
 
-## Deploy on Vercel
+### Prerequisites
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Make sure you have [Bun](https://bun.sh/), [Node.js](https://nodejs.org/), or another package manager installed.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Axcerii/portfolio-2026.git
+   cd portfolio-2026
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   bun install
+   # or npm install / yarn install
+   ```
+
+3. **Run the development server:**
+   ```bash
+   bun dev
+   ```
+
+4. **View the project:**
+   Open your browser and navigate to [http://localhost:3000](http://localhost:3000).
+
+## 📂 Project Structure
+
+- `/src/app` - Contains the main Next.js entry points, layouts, and global styles.
+- `/src/lib/components` - Reusable UI elements, modularized by feature (e.g., `hero`, `nav`, `passions`, `projects`, etc.).
+- `/src/config` - Centralized configuration files (e.g., text content and metadata) to make updating the portfolio easy without touching the logic.
+- `/public` - Static assets, images, and the dragon symbols.
+
+## 🤝 Contributing & Feedback
+
+While this is a personal portfolio project, feedback on the code architecture or visual design is always appreciated! Feel free to open an issue or reach out directly.
+
+---
+*Crafted with passion by Hugo Malezet.*
