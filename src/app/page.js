@@ -14,7 +14,30 @@ import Skills from "@/lib/components/skills/Skills";
 export default function Home() {
   const [isScrollLocked, setIsScrollLocked] = useState(true);
 
-
+  useEffect(() => {
+    if (window.location.hash) {
+      window.history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+    
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    
+    const snapToTop = () => {
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+      document.documentElement.scrollTo({ top: 0, left: 0, behavior: "instant" });
+      document.body.scrollTo({ top: 0, left: 0, behavior: "instant" });
+      const mainEl = document.querySelector('main');
+      if (mainEl) mainEl.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    };
+    
+    snapToTop();
+    
+    // Fallbacks to ensure it overrides Next.js or browser native jump
+    setTimeout(snapToTop, 10);
+    setTimeout(snapToTop, 100);
+    setTimeout(snapToTop, 300);
+  }, []);
 
   useEffect(() => {
     // ── Lock scroll until a nav link is clicked ──────────────────────────────
