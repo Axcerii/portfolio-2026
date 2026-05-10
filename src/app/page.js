@@ -10,6 +10,7 @@ import Experiences from "@/lib/components/experiences/Experiences";
 import Projects from "@/lib/components/projects/Projects";
 import Contact from "@/lib/components/contact/Contact";
 import Skills from "@/lib/components/skills/Skills";
+import BottomNav from "@/lib/components/nav/BottomNav";
 
 export default function Home() {
   const [isScrollLocked, setIsScrollLocked] = useState(true);
@@ -184,6 +185,7 @@ export default function Home() {
       <Projects />
       <Skills />
       <Contact />
+      <BottomNav />
     </main>
   );
 }
