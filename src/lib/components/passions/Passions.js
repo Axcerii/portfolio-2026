@@ -69,13 +69,13 @@ export default function Passions() {
                             <img src={presentationContent.passions[0].image} alt="Fleur à 6 pétales couverte d'une croix d'attelle" className="h-24 w-24 sm:h-32 sm:w-32 object-contain" />
                         </div>
 
-                        <h2 className={`font-serif text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 tracking-wide text-background transition-colors duration-700 ${hovered === 1 ? 'text-secondary' : ''}`}>
+                        <h2 className={`font-serif text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 sm:mb-6 tracking-wide text-background transition-colors duration-700 ${hovered === 1 ? 'text-secondary' : ''}`}>
                             {presentationContent.passions[0].title}
                         </h2>
 
                         <div className="w-12 sm:w-16 h-1 bg-secondary mx-auto mb-4 sm:mb-6 transition-all duration-1000 ease-out md:group-hover:w-full opacity-60 md:group-hover:opacity-100" />
 
-                        <p className={`text-base sm:text-lg lg:text-xl text-background/80 font-light leading-relaxed transition-all duration-1000 ease-[cubic-bezier(0.25,1,0.25,1)]
+                        <p className={`text-sm sm:text-base md:text-sm lg:text-base xl:text-lg text-background/80 font-light leading-relaxed transition-all duration-1000 ease-[cubic-bezier(0.25,1,0.25,1)]
                                       md:opacity-0 md:translate-y-8 md:group-hover:opacity-100 md:group-hover:translate-y-0`}>
                             {presentationContent.passions[0].description}
                         </p>
@@ -110,13 +110,13 @@ export default function Passions() {
                             <img src={presentationContent.passions[1].image} alt="Ideogramme japonais du son" className="h-24 w-24 sm:h-32 sm:w-32 object-contain" />
                         </div>
 
-                        <h2 className={`font-serif text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 tracking-wide text-background transition-colors duration-700 ${hovered === 2 ? 'text-accent' : ''}`}>
+                        <h2 className={`font-serif text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 sm:mb-6 tracking-wide text-background transition-colors duration-700 ${hovered === 2 ? 'text-accent' : ''}`}>
                             {presentationContent.passions[1].title}
                         </h2>
 
                         <div className="w-12 sm:w-16 h-1 bg-accent mx-auto mb-4 sm:mb-6 transition-all duration-1000 ease-out md:group-hover:w-full opacity-60 md:group-hover:opacity-100" />
 
-                        <p className={`text-base sm:text-lg lg:text-xl text-background/80 font-light leading-relaxed transition-all duration-1000 ease-[cubic-bezier(0.25,1,0.25,1)]
+                        <p className={`text-sm sm:text-base md:text-sm lg:text-base xl:text-lg text-background/80 font-light leading-relaxed transition-all duration-1000 ease-[cubic-bezier(0.25,1,0.25,1)]
                                       md:opacity-0 md:translate-y-8 md:group-hover:opacity-100 md:group-hover:translate-y-0`}>
                             {presentationContent.passions[1].description}
                         </p>

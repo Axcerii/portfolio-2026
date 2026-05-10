@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import SkillPill from "../common/SkillPill";
 import { projectsContent } from "@/config/projects";
-import { FiExternalLink, FiGithub, FiX, FiMousePointer } from "react-icons/fi";
+import { FiExternalLink, FiGithub, FiX, FiMousePointer, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import useEmblaCarousel from "embla-carousel-react";
 
 // ─── tiny reusable pieces ────────────────────────────────────────────────────
@@ -30,6 +30,14 @@ function ProjectModal({ project, onClose }) {
 
     const scrollTo = useCallback((index) => {
         if (emblaApi) emblaApi.scrollTo(index);
+    }, [emblaApi]);
+
+    const scrollPrev = useCallback(() => {
+        if (emblaApi) emblaApi.scrollPrev();
+    }, [emblaApi]);
+
+    const scrollNext = useCallback(() => {
+        if (emblaApi) emblaApi.scrollNext();
     }, [emblaApi]);
 
     const onSelect = useCallback(() => {
@@ -90,7 +98,7 @@ function ProjectModal({ project, onClose }) {
                 {/* Close Button, floating top right */}
                 <button
                     onClick={onClose}
-                    className="cursor-pointer absolute top-4 right-4 z-20 p-3 rounded-full bg-background/20 hover:bg-background/40 backdrop-blur-md transition-colors text-background"
+                    className="cursor-pointer absolute top-4 right-4 z-20 p-3 rounded-full bg-background/20 hover:bg-background/40 backdrop-blur-md transition-colors text-white"
                     aria-label="Fermer"
                 >
                     <FiX className="text-2xl" />
@@ -131,6 +139,26 @@ function ProjectModal({ project, onClose }) {
                                 />
                             ))}
                         </div>
+                    )}
+
+                    {/* Navigation Buttons (Desktop Only) */}
+                    {imagesToDisplay.length > 1 && (
+                        <>
+                            <button
+                                onClick={scrollPrev}
+                                className="hidden lg:flex absolute left-4 z-20 p-3 rounded-full bg-background/20 hover:bg-background/40 backdrop-blur-md transition-colors text-white items-center justify-center cursor-pointer"
+                                aria-label="Image précédente"
+                            >
+                                <FiChevronLeft className="text-3xl" />
+                            </button>
+                            <button
+                                onClick={scrollNext}
+                                className="hidden lg:flex absolute right-4 z-20 p-3 rounded-full bg-background/20 hover:bg-background/40 backdrop-blur-md transition-colors text-white items-center justify-center cursor-pointer"
+                                aria-label="Image suivante"
+                            >
+                                <FiChevronRight className="text-3xl" />
+                            </button>
+                        </>
                     )}
                 </div>
 

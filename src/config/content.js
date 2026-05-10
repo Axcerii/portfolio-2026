@@ -173,7 +173,7 @@ export const presentationContent = {
         },
         {
             title: "Musique Japonaise Moderne",
-            description: "Un fil turquoise est apparu quand j’étais jeune, et il ne m’a jamais lâché. La musique japonaise m’a, non seulement, marqué, mais aussi influencé. Mes modèles d’hier et d’aujourd’hui, mon style, ma façon de penser, de raisonner jusqu’à mes designs, tout cela a été renversé par une technologie présentant pourtant une légende non-vivante. Je serai ravi de parler autour de ce sujet avec vous.",
+            description: "Un fil turquoise est apparu quand j’étais jeune, et il ne m’a jamais lâché. La musique japonaise m’a, non seulement, marqué mais aussi influencé. Mes modèles d’hier et d’aujourd’hui, mon style, ma façon de penser, de raisonner jusqu’à mes designs, tout cela a été renversé par une technologie présentant pourtant une légende non-vivante. Je serai ravi de parler autour de ce sujet avec vous.",
             image: "passions/ne.svg",
             bgImage: "/hatsune_miku.png"
         }
