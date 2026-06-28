@@ -1,4 +1,4 @@
-# 🐉 Hugo Malezet - Portfolio 2026
+# Hugo Malezet - Portfolio 2026
 
 Welcome to the official repository for my interactive 2026 Developer Portfolio. 
 
@@ -6,7 +6,7 @@ This project is built to showcase my presentation, passions, professional experi
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 - **Interactive Hero (The Eye)**: A custom, interactive eye component that dynamically tracks the user's cursor while respecting boundary constraints.
 - **Dynamic Navigation System**: An immersive and sticky navigation bar utilizing glassmorphic design and custom icons to scroll smoothly between sections.
@@ -14,7 +14,7 @@ This project is built to showcase my presentation, passions, professional experi
 - **Responsive Layout**: Thoughtfully crafted with Tailwind CSS to ensure the experience is seamless across Mobile, Tablet, and Desktop breakpoints.
 - **Scroll Hijacking (Controlled)**: Smooth, lock-and-release scrolling flow that introduces the site elements progressively.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 This project leverages modern web technologies to ensure performance, maintainability, and high-end visual fidelity.
 
@@ -23,7 +23,7 @@ This project leverages modern web technologies to ensure performance, maintainab
 - **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework for rapid styling
 - **[Bun](https://bun.sh/)** - Fast JavaScript runtime and package manager
 
-## 🚀 Getting Started
+## Getting Started
 
 If you want to clone this repository and run the project locally, follow these steps:
 
