@@ -1,5 +1,5 @@
 import React from "react";
-import { SiReact, SiNextdotjs, SiTailwindcss, SiFirebase, SiPhp, SiMysql, SiJquery, SiJavascript, SiModx, SiTypescript, SiSvelte, SiPrisma, SiDocker } from "react-icons/si";
+import { SiReact, SiNextdotjs, SiTailwindcss, SiJest, SiPhp, SiMysql, SiJquery, SiJavascript, SiModx, SiTypescript, SiSvelte, SiPrisma, SiDocker, SiPostgresql, SiNestjs } from "react-icons/si";
 import { TbBrandAdobeIllustrator, TbBrandAdobePhotoshop, TbBrandAdobePremier } from "react-icons/tb";
 import { TbBrandCSharp } from "react-icons/tb";
 
@@ -70,5 +70,31 @@ export const projectsContent = [
             { name: "Docker", icon: <SiDocker /> },
         ],
         github: "https://github.com/Axcerii/bwhat/tree/master",
+    },
+    {
+        id: "projet-4",
+        title: "Héritage Silencieux",
+        subtitle: "Partage d'histoire et contes",
+        image: "/projets/hs/hs1.png",
+        description: "Projet fictif de création d'une application de partage d'histoires et de contes pour le projet Last Fragment, avec un frontend et backend séparés. Le backend est testé avec Jest et utilise NestJS pour la création d'API REST. Le frontend est développé avec SvelteKit et Tailwind CSS pour une interface utilisateur réactive et moderne. L'application permet aux utilisateurs de soumettre, lire et commenter des histoires, favorisant ainsi la créativité et l'interaction au sein de la communauté.",
+        images: [
+            "/projets/hs/hs1.png",
+            "/projets/hs/hs2.png",
+            "/projets/hs/hs3.png",
+            "/projets/hs/hs4.png"
+        ],
+        skills: [
+            { name: "Svelte", icon: <SiSvelte /> },
+            { name: "Typescript", icon: <SiTypescript /> },
+            { name: "PostgreSQL", icon: <SiPostgresql /> },
+            { name: "Prisma", icon: <SiPrisma /> },
+            { name: "Docker", icon: <SiDocker /> },
+            { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+            { name: "NestJS", icon: <SiNestjs /> },
+            { name: "Jest", icon: <SiJest /> },
+
+        ],
+        github: "https://github.com/Axcerii/ReaDBrary",
+        link: "https://heritagesilencieux.fr",
     }
 ];
